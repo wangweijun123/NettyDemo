@@ -31,6 +31,7 @@ public class NettyClientHandler extends SimpleChannelInboundHandler<String> {
             IdleStateEvent event = (IdleStateEvent) evt;
             if (event.state() == IdleState.WRITER_IDLE) {   //发送心跳
                 ctx.channel().writeAndFlush("Heartbeat" + System.getProperty("line.separator"));
+                Log.e(TAG, "发送心跳 ...");
             }
         }
     }
