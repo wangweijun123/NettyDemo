@@ -71,6 +71,12 @@ public class NettyClientHandler extends SimpleChannelInboundHandler<String> {
     }
 
     @Override
+    public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
+        Log.e(TAG, "channelRead");
+        super.channelRead(ctx, msg);
+    }
+
+    @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
         // Close the connection when an exception is raised.
 //        NettyTcpClient.getInstance().setConnectStatus(false);

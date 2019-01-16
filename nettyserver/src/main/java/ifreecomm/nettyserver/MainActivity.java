@@ -159,7 +159,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onMessageResponseServer(String msg, String uniqueId) {
-//        Log.e(TAG,"onMessageResponseServer:ChannelId:"+uniqueId);
+        Log.e(TAG,"onMessageResponseServer:ChannelId:"+uniqueId);
         logRece(msg);
     }
 
